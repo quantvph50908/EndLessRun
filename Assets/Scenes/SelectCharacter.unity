@@ -157,8 +157,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
+  m_Sprite: {fileID: -7020922751645015488, guid: f0b4dc9b8fe390b4597ba9c379657d44, type: 3}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -416,8 +416,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: -8111322212487550922, guid: 4edd415ab2cd6784ea5e7905122a703d, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -549,8 +549,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: -8111322212487550922, guid: 4edd415ab2cd6784ea5e7905122a703d, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -819,8 +819,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: -8111322212487550922, guid: 4edd415ab2cd6784ea5e7905122a703d, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -887,7 +887,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.7660377, g: 0.7660377, b: 0.7660377, a: 1}
+  m_Color: {r: 0.14688519, g: 0.4415095, b: 0.109127805, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1413,7 +1413,7 @@ RectTransform:
   m_GameObject: {fileID: 1662441968}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3.2178771, y: 5.290445, z: 2.6853685}
+  m_LocalScale: {x: 2.8308952, y: 4.654216, z: 2.362426}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 511624363}
@@ -1452,8 +1452,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1556,9 +1556,9 @@ MonoBehaviour:
   - {fileID: 919132149155446097, guid: 557fe4f5c3b4f504ebae99c159f08a84, type: 3}
   - {fileID: 919132149155446097, guid: 9681abd81fb470d48ba171ed5beccfe4, type: 3}
   Sprites:
-  - {fileID: 21300000, guid: 7088a4a199ae33242bec238b5baf6593, type: 3}
-  - {fileID: 21300000, guid: 35c8c8d9b1d8a8f4ebdd034c97ffc6f7, type: 3}
-  - {fileID: 21300000, guid: 5f978d24503df80498e81dc41bdbc9e5, type: 3}
+  - {fileID: 21300000, guid: 7506c751995367f489e75b95ddd119e5, type: 3}
+  - {fileID: 21300000, guid: 24ef2bc8795f0da40958cae3b38e8312, type: 3}
+  - {fileID: 21300000, guid: 9aa14ccfd641baa4d8340acf42b229cb, type: 3}
   CharactersIndex: 0
   ImageCharacter: {fileID: 411585606}
 --- !u!4 &1710982691

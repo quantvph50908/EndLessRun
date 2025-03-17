@@ -45,7 +45,7 @@ public class CoinSpawner : MonoBehaviour
             case 0: // Hàng dọc
                 for (int i = 0; i < coinCount; i++)
                 {
-                    Vector3 spawnPos = new Vector3(Random.Range(-4.8f, 4.4f), 1, baseZ + i * 1.5f);
+                    Vector3 spawnPos = new Vector3(Random.Range(-6f, 6f), 1.5f, baseZ + i * 1.5f);
                     SpawnFromPool(spawnPos);
                 }
                 break;
@@ -53,7 +53,7 @@ public class CoinSpawner : MonoBehaviour
             case 1: // Hàng ngang
                 for (int i = 0; i < coinCount; i++)
                 {
-                    Vector3 spawnPos = new Vector3(-4.8f + i * 1.5f, 1, baseZ);
+                    Vector3 spawnPos = new Vector3(-6f + i * 1.5f, 1.5f, baseZ);
                     SpawnFromPool(spawnPos);
                 }
                 break;
@@ -61,8 +61,8 @@ public class CoinSpawner : MonoBehaviour
             case 2: // Zig-zag
                 for (int i = 0; i < coinCount; i++)
                 {
-                    float xOffset = (i % 2 == 0) ? -2.5f : 2.5f;
-                    Vector3 spawnPos = new Vector3(xOffset, 1, baseZ + i * 1.5f);
+                    float xOffset = (i % 2 == 0) ? -3.5f : 3.5f;
+                    Vector3 spawnPos = new Vector3(xOffset, 1.5f, baseZ + i * 1.5f);
                     SpawnFromPool(spawnPos);
                 }
                 break;

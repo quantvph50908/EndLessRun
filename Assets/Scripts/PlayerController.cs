@@ -12,16 +12,22 @@ public class PlayerController : MonoBehaviour
     Rigidbody rb;
     Animator ani;
 
+
+
+    private void Awake()
+    {
+        ani = GetComponent<Animator>();
+    }
     [System.Obsolete]
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        ani = GetComponent<Animator>();
 
         if(Joystick == null)
         {
             Joystick = FindObjectOfType<Joystick>();
         }
+
 
     
     }
@@ -39,7 +45,7 @@ public class PlayerController : MonoBehaviour
         
         float NewX = transform.position.x + Horizontal * MoveSpeed * Time.deltaTime;
 
-        NewX = Mathf.Clamp(NewX, -4.8f, 4.4f);
+        NewX = Mathf.Clamp(NewX, -7f, 7f);
 
         transform.position = Vector3.Lerp(transform.position,new Vector3(NewX,transform.position.y,transform.position.z), Time.deltaTime * 20);
     }
@@ -61,6 +67,7 @@ public class PlayerController : MonoBehaviour
         if(collision.gameObject.CompareTag("Ground"))
         {
             IsGround = true;
+            Debug.Log("a");
             ani.SetBool("IsGround", true);
         }    
     }

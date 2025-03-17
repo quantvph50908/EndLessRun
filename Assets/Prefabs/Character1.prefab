@@ -558,7 +558,7 @@ MonoBehaviour:
   SpeedPlayer: 20
   MoveSpeed: 100
   Joystick: {fileID: 0}
-  JumpFoce: 10
+  JumpFoce: 30
 --- !u!54 &2424243801770411528
 Rigidbody:
   m_ObjectHideFlags: 0
