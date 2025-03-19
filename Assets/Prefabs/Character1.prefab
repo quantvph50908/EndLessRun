@@ -556,9 +556,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SpeedPlayer: 20
-  MoveSpeed: 100
+  MoveSpeed: 70
   Joystick: {fileID: 0}
-  JumpFoce: 30
+  JumpFoce: 8
 --- !u!54 &2424243801770411528
 Rigidbody:
   m_ObjectHideFlags: 0
