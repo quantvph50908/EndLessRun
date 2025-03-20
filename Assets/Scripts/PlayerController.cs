@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class PlayerController : MonoBehaviour
     private bool IsGround = true;  
     Rigidbody rb;
     Animator ani;
+    public GameObject ImageOver; 
 
 
 
@@ -28,14 +30,28 @@ public class PlayerController : MonoBehaviour
             Joystick = FindObjectOfType<Joystick>();
         }
 
+        
 
-    
+        if(ImageOver == null)
+        {
+            ImageOver = GameObject.Find("Over");
+        }
+
+        if(ImageOver != null)
+        {
+            ImageOver.SetActive(false);
+        }
+
+        
+
     }
 
     // Update is called once per frame
     void Update()
     {
+       
         transform.Translate(Vector3.forward * SpeedPlayer * Time.deltaTime);
+        MusicManeger.instance.SfxRun();
         CheckRoad();
     }
 
@@ -54,6 +70,7 @@ public class PlayerController : MonoBehaviour
     {
         if (IsGround)
         {
+            MusicManeger.instance.SfxJump();
             ani.SetTrigger("IsJump");
             ani.SetBool("IsGround", false);
             rb.AddForce(Vector3.up * JumpFoce,ForceMode.Impulse);
@@ -69,6 +86,13 @@ public class PlayerController : MonoBehaviour
             IsGround = true;
             Debug.Log("a");
             ani.SetBool("IsGround", true);
+        }  
+        
+        if(collision.gameObject.CompareTag("Ban"))
+        {
+            MusicManeger.instance.SfxGameOver();
+            ImageOver.SetActive(true);
+            Time.timeScale = 0;
         }    
     }
 
@@ -76,6 +100,7 @@ public class PlayerController : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Coin"))
         {
+            MusicManeger.instance.SfxCoin();
             other.gameObject.SetActive(false);
             GameManeger.Instance.AddScore(10);
         }
