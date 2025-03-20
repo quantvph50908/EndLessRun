@@ -51,7 +51,6 @@ public class PlayerController : MonoBehaviour
     {
        
         transform.Translate(Vector3.forward * SpeedPlayer * Time.deltaTime);
-        MusicManeger.instance.SfxRun();
         CheckRoad();
     }
 
@@ -84,7 +83,7 @@ public class PlayerController : MonoBehaviour
         if(collision.gameObject.CompareTag("Ground"))
         {
             IsGround = true;
-            Debug.Log("a");
+            Debug.Log("Ground");
             ani.SetBool("IsGround", true);
         }  
         

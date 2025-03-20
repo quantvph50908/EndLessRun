@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MusicManeger : MonoBehaviour
 {
@@ -11,8 +12,10 @@ public class MusicManeger : MonoBehaviour
     public AudioClip CoinClip;
     public AudioClip GameOverClip;
     public AudioClip JumpClip;
-    public AudioClip RunClip;
     public AudioClip BgClip;
+
+    public Slider BGVolume;
+    public Slider SFXVolume;
 
     private void Awake()
     {
@@ -31,7 +34,43 @@ public class MusicManeger : MonoBehaviour
         BgMusic.clip = BgClip;
         BgMusic.loop = true;
         BgMusic.Play();
+
+
+        float SaveBGVolume = PlayerPrefs.GetFloat("BG", 1);
+        float SaveSfxVolume = PlayerPrefs.GetFloat("Sfx", 1);
+
+        SetBG(SaveBGVolume);
+        SetSfx(SaveSfxVolume);
+
+        if(BGVolume != null)
+        {
+            BGVolume.value = SaveBGVolume;
+            BGVolume.onValueChanged.AddListener(SetBG);
+        }    
+
+        if(SFXVolume != null)
+        {
+            SFXVolume.value = SaveSfxVolume;
+            SFXVolume.onValueChanged.AddListener(SetSfx);
+        }
+
+
     }
+
+    public void SetBG(float volume)
+    {
+        Debug.Log(volume);
+        BgMusic.volume = volume;
+        PlayerPrefs.SetFloat("BG", volume);
+        PlayerPrefs.Save();
+    }    
+
+    public void SetSfx(float volume)
+    {
+        SfxMusic.volume = volume;
+        PlayerPrefs.SetFloat("Sfx",volume);
+        PlayerPrefs.Save();
+    }    
 
     public void SfxCoin()
     {
@@ -41,11 +80,6 @@ public class MusicManeger : MonoBehaviour
     public void SfxJump()
     {
         SfxMusic.PlayOneShot(JumpClip);
-    }    
-
-    public void SfxRun()
-    {
-        SfxMusic.PlayOneShot(RunClip);
     }    
 
     public void SfxGameOver()

@@ -3952,7 +3952,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8169713552965999518
 Transform:
   m_ObjectHideFlags: 0
@@ -4058,3 +4058,4 @@ MonoBehaviour:
   MoveSpeed: 70
   Joystick: {fileID: 0}
   JumpFoce: 8
+  ImageOver: {fileID: 0}
